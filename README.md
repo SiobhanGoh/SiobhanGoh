@@ -6,7 +6,7 @@
 Bachelor of Information Systems (Honours), Data Analytics · Sunway University</p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/siobhangoh/">LinkedIn</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/siobhan-goh/">LinkedIn</a> &nbsp;·&nbsp;
   <a href="https://github.com/SiobhanGoh?tab=repositories">Repositories</a> &nbsp;·&nbsp;
   <a href="https://retailai-adaptive-intelligence.streamlit.app/">RetailAI demo</a> &nbsp;·&nbsp;
   <a href="https://huggingface.co/spaces/SiobhanGoh/emotion-detection-malaybert-skeleton">NLP demo</a>
@@ -38,7 +38,6 @@ I am particularly interested in projects where the technical work supports real 
 Beyond my published apps, my master's coursework includes **implemented** work in R-based analytics, deep learning and model evaluation:
 
 - **BloodReady AI · R / Forecasting:** analysed Malaysian blood-donation records, compared four interpretable forecast approaches over retrospective years, and reported low-collection-day limitations. *A reproducible R Markdown analysis, not a deployed Shiny app.*
-- **Property Analytics · R / Statistics:** combined text-derived features and structured housing attributes using address-grouped validation and penalised regression; evaluated conditional forecasts with time-based holdouts.
 - **Deep Learning · PyTorch / Transformers:** implemented neural networks, sequence classifiers, a scratch Transformer and BERT fine-tuning, with training, evaluation and checkpoint-handling workflows.
 - **Computer Vision · Transfer Learning:** explored ensemble inference with frozen pretrained CLIP, SigLIP, SigLIP2 and DINOv2 encoders, including low-resolution validation checks.
 
@@ -63,6 +62,6 @@ Selected work also includes Bayesian-network inference and decision analysis, la
 
 ### Let's connect
 
-I'm open to internship opportunities across **AI, Machine Learning, Data Science, Data Analytics and Business Intelligence**. The best way to reach me is via [LinkedIn](https://www.linkedin.com/in/siobhangoh/).
+I'm open to internship opportunities across **AI, Machine Learning, Data Science, Data Analytics and Business Intelligence**. The best way to reach me is via [LinkedIn](https://www.linkedin.com/in/siobhan-goh/).
 
 <p align="center"><sub>Thoughtful models. Clear analysis. Useful outcomes. ♡</sub></p>
