@@ -8,7 +8,6 @@ Bachelor of Information Systems (Honours), Data Analytics · Sunway University</
 <p align="center">
   <a href="https://www.linkedin.com/in/siobhan-goh/">LinkedIn</a> &nbsp;·&nbsp;
   <a href="https://github.com/SiobhanGoh?tab=repositories">Repositories</a> &nbsp;·&nbsp;
-  <a href="https://retailai-adaptive-intelligence.streamlit.app/">RetailAI demo</a> &nbsp;·&nbsp;
   <a href="https://capstone2-sentiment-streamlit-colab.pages.dev/">Sentiment web app</a> &nbsp;·&nbsp;
   <a href="https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/">Blood donation dashboard</a>
 </p>
@@ -27,11 +26,45 @@ I am particularly interested in projects where the technical work supports real 
 
 ### Featured builds
 
-| | Project and contribution |
-|:---:|---|
-| **01** | **[RetailAI — Adaptive Sales Intelligence & Recommendation Platform](https://github.com/SiobhanGoh/RetailAI-Adaptive-Sales-Intelligence)**  <br/>Modular Streamlit application for business KPIs, sales exploration, weekly forecasting, product-similarity recommendations and PDF reports. <br/>[Explore source](https://github.com/SiobhanGoh/RetailAI-Adaptive-Sales-Intelligence) · [Live app](https://retailai-adaptive-intelligence.streamlit.app/) |
-| **02** | **[Malay–English Sentiment Analysis](https://github.com/SiobhanGoh/capstone2-sentiment-streamlit-colab)**  <br/>Three-class sentiment analysis with a fine-tuned multilingual BERT. The React web app runs a 16-bit ONNX version of the model inside the visitor's browser, so text never leaves their device. It analyses single texts, pasted, uploaded or YouTube comments, and exports CSV/PDF reports. The 16-bit model matched the full-precision model on the 981-input test set (76.04% accuracy). <br/>[Explore source](https://github.com/SiobhanGoh/capstone2-sentiment-streamlit-colab/tree/browser-model) · [Live web app](https://capstone2-sentiment-streamlit-colab.pages.dev/) · [Original Streamlit demo](https://huggingface.co/spaces/SiobhanGoh/emotion-detection-malaybert-skeleton) |
-| **03** | **[Klang Valley Blood Donation Forecasts](https://github.com/SiobhanGoh/klang-valley-blood-donation-dashboard)**  <br/>R Shiny dashboard of daily blood-donation collections by ABO group, built from my BloodReady AI analysis. A daily GitHub Action tests the code, pulls the latest data.gov.my records, recomputes four forecasting methods and publishes the site; Shinylive runs it in the browser. Includes a live tracker, method comparisons, low-collection-day errors, a Blood 101 guide and printable reports. <br/>[Explore source](https://github.com/SiobhanGoh/klang-valley-blood-donation-dashboard) · [Live dashboard](https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/) |
+I keep revisiting my past projects rather than leaving them as they were first submitted: re-checking the results, fixing what fell short and rebuilding when a better design is possible. Each project lists what changed in its latest round.
+
+#### 01 · [RetailAI — Adaptive Sales Intelligence](https://github.com/SiobhanGoh/RetailAI-Adaptive-Sales-Intelligence)
+<sub>First built May 2026 · rebuilt as version 2 in November 2026</sub>
+
+Open a CSV or Excel sales export and get trends, forecasts with error bands, customer segments and product pairings, all calculated in your browser. The file never leaves the tab.
+
+**What improved in version 2**
+- **New platform:** moved off Streamlit to a static browser app that doesn't sleep, with a new order-ticket interface.
+- **Better forecasts:** one model with a made-up confidence score became four models, each replayed on past weeks, with the best one chosen and error bands drawn from its past mistakes.
+- **More faithful data handling:** returns and duplicate rows are kept and reported instead of silently dropped. Column detection no longer mistakes prices for revenue or ship dates for order dates.
+- **Honest labels:** a "business health score" that only measured dataset size, and rule-based features branded as AI, were removed or renamed.
+- **New features:** customer segments and cohorts, product pairings, explanations for unusual weeks, comparisons with last year and CSV exports.
+
+[Explore source](https://github.com/SiobhanGoh/RetailAI-Adaptive-Sales-Intelligence) · <sub>new live link coming soon</sub>
+
+#### 02 · [Malay–English Sentiment Analysis](https://github.com/SiobhanGoh/capstone2-sentiment-streamlit-colab)
+<sub>First built December 2025 · re-evaluated October 2026 · web app November 2026</sub>
+
+Negative / Neutral / Positive sentiment for Malay, English and code-switched text, using a fine-tuned multilingual BERT.
+
+**What improved**
+- **Corrected evaluation (Oct 2026):** the original train/test splits overlapped, so I rebuilt the evaluation on one shared, disjoint split. Corrected result: 76.04% test accuracy, against 66.46% for a TF-IDF baseline.
+- **Private, always-on web app (Nov 2026):** a 16-bit ONNX copy of the model now runs inside the visitor's browser, so text never leaves their device. It gives the same labels as the full model on the 981-input test set.
+- **Richer comment analysis:** pull up to 100 YouTube comments, or paste or upload up to 1,000. Results show video thumbnails, sentiment columns, search and filters, plus CSV exports and PDF reports in the app's pastel style.
+
+[Live web app](https://capstone2-sentiment-streamlit-colab.pages.dev/) · [Explore source](https://github.com/SiobhanGoh/capstone2-sentiment-streamlit-colab/tree/browser-model) · [Original Streamlit demo](https://huggingface.co/spaces/SiobhanGoh/emotion-detection-malaybert-skeleton) <sub>(wakes up after a minute when idle)</sub>
+
+#### 03 · [Klang Valley Blood Donation Forecasts](https://github.com/SiobhanGoh/klang-valley-blood-donation-dashboard)
+<sub>November 2026 · grew out of my BloodReady AI analysis</sub>
+
+An R Shiny dashboard of daily blood-donation collections in the Klang Valley by ABO blood group.
+
+**What improved**
+- **From one-off report to live dashboard:** my BloodReady R Markdown analysis now refreshes every morning with the latest data.gov.my records, through a tested GitHub Actions pipeline.
+- **Still checked against the original:** automated tests confirm the four forecasting methods still reproduce the report's results on its frozen snapshot.
+- **Easier to explore:** a story-style layout with interactive charts, a live tracker, low-collection-day errors, a Blood 101 guide for donors and printable reports.
+
+[Live dashboard](https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/) <sub>(first visit takes up to a minute while R loads)</sub> · [Explore source](https://github.com/SiobhanGoh/klang-valley-blood-donation-dashboard)
 
 > These are portfolio prototypes and academic projects—not validated production decision systems. See individual READMEs for model-evaluation limitations.
 
@@ -51,7 +84,7 @@ Research and application development require more than a high metric. My recent 
 
 ### Toolkit
 
-**Languages & analysis** · Python · R · Pandas · NumPy · scikit-learn · statistical modelling  
+**Languages & analysis** · Python · R · TypeScript · Pandas · NumPy · scikit-learn · statistical modelling  
 **Machine learning & NLP** · PyTorch · Transformers · BERT fine-tuning · classical ML · model evaluation  
 **Visualisation & applications** · React · R Shiny / Shinylive · Streamlit · Plotly · Matplotlib · ggplot2 · R Markdown · ReportLab  
 **Deployment & tools** · ONNX / transformers.js · GitHub Actions · GitHub Pages · Cloudflare Pages · Hugging Face Spaces · Jupyter / Google Colab
