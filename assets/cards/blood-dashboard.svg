@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="492" viewBox="0 0 360 492" role="img" aria-label="Blood Donation Forecasts: Klang Valley donations by ABO group, refreshed every morning from official data.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#111622"/><stop offset="70%" stop-color="#1E2433"/><stop offset="100%" stop-color="#312536"/></linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#E2667E"/><stop offset="100%" stop-color="#D88BA7"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#E2667E" stop-opacity="0.22"/><stop offset="100%" stop-color="#E2667E" stop-opacity="0"/></radialGradient>
+    <style>
+      text{font-family:Arial,'DejaVu Sans',sans-serif}
+      .tag{font-size:13px;fill:#E2667E;letter-spacing:2.4px;font-weight:700}
+      .title{font-size:30px;font-weight:700;fill:#F9F7FA}
+      .pitch{font-size:17px;fill:#D4D3DD}
+      .big{font-size:50px;font-weight:700;fill:url(#acc)}
+      .biglab{font-size:15px;fill:#C3C1CF}
+      .fact{font-size:16px;fill:#E8E6EE}
+      .chip{font-size:14px;fill:#F3F0F6}
+    </style>
+  </defs>
+  <rect width="360" height="492" rx="22" fill="url(#bg)"/>
+  <rect x=".5" y=".5" width="359" height="491" rx="21.5" fill="none" stroke="#E2667E" stroke-opacity=".3"/>
+  <circle cx="300" cy="62" r="105" fill="url(#halo)"/>
+  <g transform="translate(272 22) scale(.88)"><path d="M35 0 C41 18 63 34 63 50 A28 28 0 0 1 7 50 C7 34 29 18 35 0Z" fill="#E2667E" opacity=".9"/><path d="M19 54 L28 54 L32 44 L38 64 L43 52 L51 52" stroke="#F9F7FA" stroke-width="2.4" fill="none" stroke-linejoin="round"/></g>
+  <rect x="26" y="32" width="28" height="4" rx="2" fill="url(#acc)"/>
+  <text x="26" y="58" class="tag">FORECASTING IN R</text>
+  <text x="26" y="92" class="title">Blood Donation</text><text x="26" y="126" class="title">Forecasts</text><text x="26" y="164" class="pitch">Klang Valley donations by</text><text x="26" y="187" class="pitch">ABO group, refreshed every</text><text x="26" y="210" class="pitch">morning from official data.</text><line x1="26" y1="237" x2="334" y2="237" stroke="#F9F7FA" stroke-opacity=".12"/><text x="26" y="289" class="big">Daily</text><text x="26" y="313" class="biglab">automated refresh and tests</text><circle cx="30" cy="342" r="3.5" fill="#E2667E"/><text x="42" y="347" class="fact">4 forecasting methods compared</text><circle cx="30" cy="367" r="3.5" fill="#E2667E"/><text x="42" y="372" class="fact">Matches the original report</text><circle cx="30" cy="392" r="3.5" fill="#E2667E"/><text x="42" y="397" class="fact">Blood 101 guide for donors</text>
+  <rect x="26" y="436" width="81" height="30" rx="15" fill="#E2667E" fill-opacity=".14" stroke="#E2667E" stroke-opacity=".6"/><text x="66" y="456" text-anchor="middle" class="chip">R Shiny</text><rect x="115" y="436" width="95" height="30" rx="15" fill="#E2667E" fill-opacity=".14" stroke="#E2667E" stroke-opacity=".6"/><text x="162" y="456" text-anchor="middle" class="chip">Shinylive</text><rect x="218" y="436" width="79" height="30" rx="15" fill="#E2667E" fill-opacity=".14" stroke="#E2667E" stroke-opacity=".6"/><text x="257" y="456" text-anchor="middle" class="chip">Actions</text>
+</svg>

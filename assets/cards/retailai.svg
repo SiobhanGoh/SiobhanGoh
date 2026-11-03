@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="492" viewBox="0 0 360 492" role="img" aria-label="RetailAI: Drop in a sales file and get trends, forecasts, customer segments and product pairings.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#111622"/><stop offset="70%" stop-color="#1E2433"/><stop offset="100%" stop-color="#312536"/></linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#E8B067"/><stop offset="100%" stop-color="#D88BA7"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#E8B067" stop-opacity="0.22"/><stop offset="100%" stop-color="#E8B067" stop-opacity="0"/></radialGradient>
+    <style>
+      text{font-family:Arial,'DejaVu Sans',sans-serif}
+      .tag{font-size:13px;fill:#E8B067;letter-spacing:2.4px;font-weight:700}
+      .title{font-size:30px;font-weight:700;fill:#F9F7FA}
+      .pitch{font-size:17px;fill:#D4D3DD}
+      .big{font-size:50px;font-weight:700;fill:url(#acc)}
+      .biglab{font-size:15px;fill:#C3C1CF}
+      .fact{font-size:16px;fill:#E8E6EE}
+      .chip{font-size:14px;fill:#F3F0F6}
+    </style>
+  </defs>
+  <rect width="360" height="492" rx="22" fill="url(#bg)"/>
+  <rect x=".5" y=".5" width="359" height="491" rx="21.5" fill="none" stroke="#E8B067" stroke-opacity=".3"/>
+  <circle cx="300" cy="62" r="105" fill="url(#halo)"/>
+  <g transform="translate(272 22) scale(.88)"><rect x="0" y="42" width="7" height="26" rx="2" fill="#E8B067" opacity="0.45"/><rect x="11" y="30" width="7" height="38" rx="2" fill="#E8B067" opacity="0.54"/><rect x="22" y="37" width="7" height="31" rx="2" fill="#E8B067" opacity="0.63"/><rect x="33" y="18" width="7" height="50" rx="2" fill="#E8B067" opacity="0.72"/><rect x="44" y="24" width="7" height="44" rx="2" fill="#E8B067" opacity="0.81"/><rect x="55" y="6" width="7" height="62" rx="2" fill="#E8B067" opacity="0.90"/><path d="M-2 36 L22 24 L42 30 L68 4" stroke="#D88BA7" stroke-width="2.4" fill="none" stroke-dasharray="4 3"/></g>
+  <rect x="26" y="32" width="28" height="4" rx="2" fill="url(#acc)"/>
+  <text x="26" y="58" class="tag">RETAIL ANALYTICS</text>
+  <text x="26" y="92" class="title">RetailAI</text><text x="26" y="130" class="pitch">Drop in a sales file and get</text><text x="26" y="153" class="pitch">trends, forecasts, customer</text><text x="26" y="176" class="pitch">segments and product pairings.</text><line x1="26" y1="203" x2="334" y2="203" stroke="#F9F7FA" stroke-opacity=".12"/><text x="26" y="255" class="big">4</text><text x="26" y="279" class="biglab">forecast models with error bands</text><circle cx="30" cy="308" r="3.5" fill="#E8B067"/><text x="42" y="313" class="fact">3 sample stores, incl. RM grocer</text><circle cx="30" cy="333" r="3.5" fill="#E8B067"/><text x="42" y="338" class="fact">Rule-based parts labelled honestly</text><circle cx="30" cy="358" r="3.5" fill="#E8B067"/><text x="42" y="363" class="fact">Your file never leaves the tab</text>
+  <rect x="26" y="436" width="104" height="30" rx="15" fill="#E8B067" fill-opacity=".14" stroke="#E8B067" stroke-opacity=".6"/><text x="78" y="456" text-anchor="middle" class="chip">TypeScript</text><rect x="138" y="436" width="63" height="30" rx="15" fill="#E8B067" fill-opacity=".14" stroke="#E8B067" stroke-opacity=".6"/><text x="170" y="456" text-anchor="middle" class="chip">React</text><rect x="210" y="436" width="111" height="30" rx="15" fill="#E8B067" fill-opacity=".14" stroke="#E8B067" stroke-opacity=".6"/><text x="265" y="456" text-anchor="middle" class="chip">Forecasting</text>
+</svg>

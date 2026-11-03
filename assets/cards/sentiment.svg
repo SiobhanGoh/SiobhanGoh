@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="492" viewBox="0 0 360 492" role="img" aria-label="Rojak Sentiment: Reads Malay, English and code-switched comments as negative, neutral or positive.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#111622"/><stop offset="70%" stop-color="#1E2433"/><stop offset="100%" stop-color="#312536"/></linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#F1A7C4"/><stop offset="100%" stop-color="#AE92BA"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#F1A7C4" stop-opacity="0.22"/><stop offset="100%" stop-color="#F1A7C4" stop-opacity="0"/></radialGradient>
+    <style>
+      text{font-family:Arial,'DejaVu Sans',sans-serif}
+      .tag{font-size:13px;fill:#F1A7C4;letter-spacing:2.4px;font-weight:700}
+      .title{font-size:30px;font-weight:700;fill:#F9F7FA}
+      .pitch{font-size:17px;fill:#D4D3DD}
+      .big{font-size:50px;font-weight:700;fill:url(#acc)}
+      .biglab{font-size:15px;fill:#C3C1CF}
+      .fact{font-size:16px;fill:#E8E6EE}
+      .chip{font-size:14px;fill:#F3F0F6}
+    </style>
+  </defs>
+  <rect width="360" height="492" rx="22" fill="url(#bg)"/>
+  <rect x=".5" y=".5" width="359" height="491" rx="21.5" fill="none" stroke="#F1A7C4" stroke-opacity=".3"/>
+  <circle cx="300" cy="62" r="105" fill="url(#halo)"/>
+  <g transform="translate(272 22) scale(.88)"><rect x="0" y="0" width="52" height="34" rx="12" fill="#F1A7C4" opacity=".85"/><path d="M12 34 l-6 10 l14 -10z" fill="#F1A7C4" opacity=".85"/><rect x="22" y="30" width="48" height="30" rx="11" fill="#AE92BA" opacity=".7"/><path d="M58 60 l6 9 l-14 -9z" fill="#AE92BA" opacity=".7"/><circle cx="14" cy="17" r="3.2" fill="#1E2433"/><circle cx="26" cy="17" r="3.2" fill="#1E2433"/><circle cx="38" cy="17" r="3.2" fill="#1E2433"/></g>
+  <rect x="26" y="32" width="28" height="4" rx="2" fill="url(#acc)"/>
+  <text x="26" y="58" class="tag">MULTILINGUAL NLP</text>
+  <text x="26" y="92" class="title">Rojak Sentiment</text><text x="26" y="130" class="pitch">Reads Malay, English and</text><text x="26" y="153" class="pitch">code-switched comments as</text><text x="26" y="176" class="pitch">negative, neutral or positive.</text><line x1="26" y1="203" x2="334" y2="203" stroke="#F9F7FA" stroke-opacity=".12"/><text x="26" y="255" class="big">76.04%</text><text x="26" y="279" class="biglab">test accuracy, corrected split</text><circle cx="30" cy="308" r="3.5" fill="#F1A7C4"/><text x="42" y="313" class="fact">Fine-tuned multilingual BERT</text><circle cx="30" cy="333" r="3.5" fill="#F1A7C4"/><text x="42" y="338" class="fact">Runs privately in the browser</text><circle cx="30" cy="358" r="3.5" fill="#F1A7C4"/><text x="42" y="363" class="fact">YouTube comment dashboards</text>
+  <rect x="26" y="436" width="81" height="30" rx="15" fill="#F1A7C4" fill-opacity=".14" stroke="#F1A7C4" stroke-opacity=".6"/><text x="66" y="456" text-anchor="middle" class="chip">PyTorch</text><rect x="115" y="436" width="118" height="30" rx="15" fill="#F1A7C4" fill-opacity=".14" stroke="#F1A7C4" stroke-opacity=".6"/><text x="174" y="456" text-anchor="middle" class="chip">Transformers</text><rect x="241" y="436" width="60" height="30" rx="15" fill="#F1A7C4" fill-opacity=".14" stroke="#F1A7C4" stroke-opacity=".6"/><text x="271" y="456" text-anchor="middle" class="chip">ONNX</text>
+</svg>

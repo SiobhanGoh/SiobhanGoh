@@ -15,6 +15,25 @@ Bachelor of Information Systems (Honours), Data Analytics · Sunway University</
 
 <p align="center"><sub>Currently interested in full-time internships across AI/ML, data science, analytics and business intelligence · November 2026–February 2027</sub></p>
 
+### Projects at a glance
+
+<table>
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <a href="https://siobhangoh.github.io/RetailAI-Adaptive-Sales-Intelligence/"><img src="assets/cards/retailai.svg" width="100%" alt="RetailAI: drop in a sales file and get trends, forecasts with error bands, customer segments and product pairings, all in the browser" /></a><br/>
+      <a href="https://siobhangoh.github.io/RetailAI-Adaptive-Sales-Intelligence/"><b>Live app</b></a> · <a href="https://github.com/SiobhanGoh/RetailAI-Adaptive-Sales-Intelligence">Code</a> · <a href="#01--retailai--adaptive-sales-intelligence">Details ↓</a>
+    </td>
+    <td width="33%" valign="top" align="center">
+      <a href="https://capstone2-sentiment-streamlit-colab.pages.dev/"><img src="assets/cards/sentiment.svg" width="100%" alt="Rojak Sentiment: Malay, English and code-switched sentiment with a fine-tuned multilingual BERT, 76.04% test accuracy, running in the browser" /></a><br/>
+      <a href="https://capstone2-sentiment-streamlit-colab.pages.dev/"><b>Live app</b></a> · <a href="https://github.com/SiobhanGoh/capstone2-sentiment-streamlit-colab/tree/browser-model">Code</a> · <a href="#02--malayenglish-sentiment-analysis">Details ↓</a>
+    </td>
+    <td width="33%" valign="top" align="center">
+      <a href="https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/"><img src="assets/cards/blood-dashboard.svg" width="100%" alt="Blood Donation Forecasts: R Shiny dashboard of Klang Valley donations by ABO group, refreshed daily from official data, comparing four forecasting methods" /></a><br/>
+      <a href="https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/"><b>Live app</b></a> · <a href="https://github.com/SiobhanGoh/klang-valley-blood-donation-dashboard">Code</a> · <a href="#03--klang-valley-blood-donation-forecasts">Details ↓</a>
+    </td>
+  </tr>
+</table>
+
 ---
 
 ### A little about me
