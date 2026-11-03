@@ -8,6 +8,7 @@ Bachelor of Information Systems (Honours), Data Analytics · Sunway University</
 <p align="center">
   <a href="https://www.linkedin.com/in/siobhan-goh/">LinkedIn</a> &nbsp;·&nbsp;
   <a href="https://github.com/SiobhanGoh?tab=repositories">Repositories</a> &nbsp;·&nbsp;
+  <a href="https://siobhangoh.github.io/RetailAI-Adaptive-Sales-Intelligence/">RetailAI app</a> &nbsp;·&nbsp;
   <a href="https://capstone2-sentiment-streamlit-colab.pages.dev/">Sentiment web app</a> &nbsp;·&nbsp;
   <a href="https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/">Blood donation dashboard</a>
 </p>
@@ -31,16 +32,17 @@ I keep revisiting my past projects rather than leaving them as they were first s
 #### 01 · [RetailAI — Adaptive Sales Intelligence](https://github.com/SiobhanGoh/RetailAI-Adaptive-Sales-Intelligence)
 <sub>First built May 2026 · rebuilt as version 2 in November 2026</sub>
 
-Open a CSV or Excel sales export and get trends, forecasts with error bands, customer segments and product pairings, all calculated in your browser. The file never leaves the tab.
+Open a CSV or Excel sales export and get trends, forecasts with error bands, customer segments and product pairings, all calculated in your browser. The file never leaves the tab. Three built-in sample stores let you try it straight away: a fictional US office-supplies store, a real UK online gift shop and a synthetic Malaysian grocery chain priced in RM.
 
 **What improved in version 2**
-- **New platform:** moved off Streamlit to a static browser app that doesn't sleep, with a new order-ticket interface.
+- **New platform:** moved off Streamlit to a static browser app that doesn't sleep, with a new order-ticket interface and light and dark modes.
 - **Better forecasts:** one model with a made-up confidence score became four models, each replayed on past weeks, with the best one chosen and error bands drawn from its past mistakes.
 - **More faithful data handling:** returns and duplicate rows are kept and reported instead of silently dropped. Column detection no longer mistakes prices for revenue or ship dates for order dates.
 - **Honest labels:** a "business health score" that only measured dataset size, and rule-based features branded as AI, were removed or renamed.
 - **New features:** customer segments and cohorts, product pairings, explanations for unusual weeks, comparisons with last year and CSV exports.
+- **Better sample data:** the original US sample couldn't show returns, margins or real repeat buying, so I added real UK invoices (CC BY 4.0) and a Malaysian store built from official data.gov.my product and retail-trade data, with Raya and Chinese New Year peaks.
 
-[Explore source](https://github.com/SiobhanGoh/RetailAI-Adaptive-Sales-Intelligence) · <sub>new live link coming soon</sub>
+[Live app](https://siobhangoh.github.io/RetailAI-Adaptive-Sales-Intelligence/) · [Explore source](https://github.com/SiobhanGoh/RetailAI-Adaptive-Sales-Intelligence)
 
 #### 02 · [Malay–English Sentiment Analysis](https://github.com/SiobhanGoh/capstone2-sentiment-streamlit-colab)
 <sub>First built December 2025 · re-evaluated October 2026 · web app November 2026</sub>
@@ -50,7 +52,9 @@ Negative / Neutral / Positive sentiment for Malay, English and code-switched tex
 **What improved**
 - **Corrected evaluation (Oct 2026):** the original train/test splits overlapped, so I rebuilt the evaluation on one shared, disjoint split. Corrected result: 76.04% test accuracy, against 66.46% for a TF-IDF baseline.
 - **Private, always-on web app (Nov 2026):** a 16-bit ONNX copy of the model now runs inside the visitor's browser, so text never leaves their device. It gives the same labels as the full model on the 981-input test set.
-- **Richer comment analysis:** pull up to 100 YouTube comments, or paste or upload up to 1,000. Results show video thumbnails, sentiment columns, search and filters, plus CSV exports and PDF reports in the app's pastel style.
+- **Richer comment analysis:** pull up to 100 YouTube comments, or paste or upload up to 1,000. A results dashboard shows the label mix, creator notes (most-liked negative comments, viewer questions), theme and Malaysian-state maps and a comment timeline, plus PDF, CSV and copyable summaries. Two videos can be compared side by side.
+- **Explainable and correctable:** "Why this label?" shades the words that move the score most, and "Wrong label?" lets users record the right label, collected as a hand-checked test set for the next model.
+- **Next model, in progress:** a notebook compares Malaysian DeBERTa-v2, Malaysian RoBERTa and XLM-T under the same corrected protocol, choosing the winner on validation before any test score is computed.
 
 [Live web app](https://capstone2-sentiment-streamlit-colab.pages.dev/) · [Explore source](https://github.com/SiobhanGoh/capstone2-sentiment-streamlit-colab/tree/browser-model) · [Original Streamlit demo](https://huggingface.co/spaces/SiobhanGoh/emotion-detection-malaybert-skeleton) <sub>(wakes up after a minute when idle)</sub>
 
@@ -62,9 +66,10 @@ An R Shiny dashboard of daily blood-donation collections in the Klang Valley by 
 **What improved**
 - **From one-off report to live dashboard:** my BloodReady R Markdown analysis now refreshes every morning with the latest data.gov.my records, through a tested GitHub Actions pipeline.
 - **Still checked against the original:** automated tests confirm the four forecasting methods still reproduce the report's results on its frozen snapshot.
-- **Easier to explore:** a story-style layout with interactive charts, a live tracker, low-collection-day errors, a Blood 101 guide for donors and printable reports.
+- **Easier to explore:** a story-style layout in plain words, with interactive charts, light and dark themes, a live tracker, low-collection-day errors, a Blood 101 guide for donors and printable reports.
+- **Faster to open:** I cut the browser download by drawing charts directly with plotly.js and loading 46 R packages instead of 66, so the first visit now takes around half a minute.
 
-[Live dashboard](https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/) <sub>(first visit takes up to a minute while R loads)</sub> · [Explore source](https://github.com/SiobhanGoh/klang-valley-blood-donation-dashboard)
+[Live dashboard](https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/) <sub>(first visit takes around half a minute while R loads)</sub> · [Explore source](https://github.com/SiobhanGoh/klang-valley-blood-donation-dashboard)
 
 > These are portfolio prototypes and academic projects—not validated production decision systems. See individual READMEs for model-evaluation limitations.
 
