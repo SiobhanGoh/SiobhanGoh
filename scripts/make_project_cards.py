@@ -28,7 +28,7 @@ CARDS = [
         "tag": "MULTILINGUAL NLP",
         "title": ["Rojak Sentiment"],
         "pitch": ["Reads Malay, English and", "code-switched comments as", "negative, neutral or positive."],
-        "big": "76.04%", "big_label": "test accuracy, corrected split",
+        "big": "77.37%", "big_label": "test accuracy, mBERT + TF-IDF blend",
         "facts": ["Fine-tuned multilingual BERT", "Runs privately in the browser", "YouTube comment dashboards"],
         "chips": ["PyTorch", "Transformers", "ONNX"],
         "accent": "#F1A7C4", "accent2": "#AE92BA", "motif": "bubbles",
