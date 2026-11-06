@@ -24,11 +24,11 @@ Bachelor of Information Systems (Honours), Data Analytics · Sunway University</
       <a href="https://siobhangoh.github.io/RetailAI-Adaptive-Sales-Intelligence/"><b>Live app</b></a> · <a href="https://github.com/SiobhanGoh/RetailAI-Adaptive-Sales-Intelligence">Code</a> · <a href="#01--retailai--adaptive-sales-intelligence">Details ↓</a>
     </td>
     <td width="33%" valign="top" align="center">
-      <a href="https://capstone2-sentiment-streamlit-colab.pages.dev/"><img src="assets/cards/sentiment.svg" width="260" alt="Rojak Sentiment: Malay, English and code-switched sentiment with a fine-tuned multilingual BERT blended with TF-IDF, 77.37% test accuracy, running in the browser" /></a><br/>
-      <a href="https://capstone2-sentiment-streamlit-colab.pages.dev/"><b>Live app</b></a> · <a href="https://github.com/SiobhanGoh/capstone2-sentiment-streamlit-colab/tree/browser-model">Code</a> · <a href="#02--malayenglish-sentiment-analysis">Details ↓</a>
+      <a href="https://capstone2-sentiment-streamlit-colab.pages.dev/"><img src="assets/cards/sentiment.svg" width="260" alt="Rojak Sentiment: Malay, English and code-switched sentiment with a multilingual BERT distilled from XLM-RoBERTa-large, 80.33% test accuracy, running in the browser" /></a><br/>
+      <a href="https://capstone2-sentiment-streamlit-colab.pages.dev/"><b>Live app</b></a> · <a href="https://github.com/SiobhanGoh/capstone2-sentiment-streamlit-colab">Code</a> · <a href="#02--malayenglish-sentiment-analysis">Details ↓</a>
     </td>
     <td width="33%" valign="top" align="center">
-      <a href="https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/"><img src="assets/cards/blood-dashboard.svg" width="260" alt="Blood Donation Forecasts: R Shiny dashboard of Klang Valley donations by ABO group, refreshed daily from official data, comparing four forecasting methods" /></a><br/>
+      <a href="https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/"><img src="assets/cards/blood-dashboard.svg" width="260" alt="Blood Donation Forecasts: R dashboard of Klang Valley donations by ABO group, rebuilt daily from official data as a fast static site, comparing four forecasting methods" /></a><br/>
       <a href="https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/"><b>Live app</b></a> · <a href="https://github.com/SiobhanGoh/klang-valley-blood-donation-dashboard">Code</a> · <a href="#03--klang-valley-blood-donation-forecasts">Details ↓</a>
     </td>
   </tr>
@@ -51,47 +51,40 @@ I keep revisiting my past projects rather than leaving them as they were first s
 #### 01 · [RetailAI — Adaptive Sales Intelligence](https://github.com/SiobhanGoh/RetailAI-Adaptive-Sales-Intelligence)
 <sub>First built May 2026 · rebuilt as version 2 in November 2026</sub>
 
-Open a CSV or Excel sales export and get trends, forecasts with error bands, customer segments and product pairings, all calculated in your browser. The file never leaves the tab. Three built-in sample stores let you try it straight away: a fictional US office-supplies store, a real UK online gift shop and a synthetic Malaysian grocery chain priced in RM.
+Open a CSV or Excel sales export and get trends, forecasts, customer segments and product pairings, all calculated in your browser. Three sample stores (US, UK and Malaysia) let you try it straight away.
 
 **What improved in version 2**
-- **New platform:** moved off Streamlit to a static browser app that doesn't sleep, with a new order-ticket interface and light and dark modes.
-- **Better forecasts:** one model with a made-up confidence score became four models, each replayed on past weeks, with the best one chosen and error bands drawn from its past mistakes.
-- **More faithful data handling:** returns and duplicate rows are kept and reported instead of silently dropped. Column detection no longer mistakes prices for revenue or ship dates for order dates.
-- **Honest labels:** a "business health score" that only measured dataset size, and rule-based features branded as AI, were removed or renamed.
-- **New features:** customer segments and cohorts, product pairings, explanations for unusual weeks, comparisons with last year and CSV exports.
-- **Better sample data:** the original US sample couldn't show returns, margins or real repeat buying, so I added real UK invoices (CC BY 4.0) and a Malaysian store built from official data.gov.my product and retail-trade data, with Raya and Chinese New Year peaks.
-- **Reworked for first-time users:** headlines now explain each result in plain words with a likely cause and next step, and the forecast says how far to trust it. One-time tips, ? explanations for jargon, a filter dropdown, ranked search boxes and phone layouts make it easier to find your way.
+- **New platform:** moved off Streamlit to a fast browser app that doesn't sleep. Your file never leaves the tab.
+- **Stronger, more honest analysis:** four forecasting models tested on past weeks, with error bands from their real mistakes, more careful data handling and misleading labels removed.
+- **Redesigned UI/UX:** a new interface with plain-words explanations, Bahasa Malaysia, accessibility checks and phone layouts.
+- **New features and data:** customer segments, product pairings, shareable views, and two new sample stores built from real UK and official Malaysian data.
 
 [Live app](https://siobhangoh.github.io/RetailAI-Adaptive-Sales-Intelligence/) · [Explore source](https://github.com/SiobhanGoh/RetailAI-Adaptive-Sales-Intelligence)
 
 #### 02 · [Malay–English Sentiment Analysis](https://github.com/SiobhanGoh/capstone2-sentiment-streamlit-colab)
-<sub>First built December 2025 · re-evaluated October 2026 · web app and model upgrade November 2026</sub>
+<sub>First built December 2025 · re-evaluated October 2026 · rebuilt November 2026</sub>
 
-Negative / Neutral / Positive sentiment for Malay, English and code-switched text, using a fine-tuned multilingual BERT.
+Negative / Neutral / Positive sentiment for Malay, English and code-switched text.
 
 **What improved**
-- **Corrected evaluation (Oct 2026):** the original train/test splits overlapped, so I rebuilt the evaluation on one shared, disjoint split. Corrected result: 76.04% test accuracy, against 66.46% for a TF-IDF baseline.
-- **Private, always-on web app (Nov 2026):** a 16-bit ONNX copy of the model now runs inside the visitor's browser, so text never leaves their device. It gives the same labels as the full model on the 981-input test set.
-- **Richer comment analysis:** pull up to 100 YouTube comments, or paste or upload up to 1,000. A results dashboard shows the label mix, creator notes (most-liked negative comments, viewer questions), theme and Malaysian-state maps and a comment timeline, plus PDF, CSV and copyable summaries. Two videos can be compared side by side.
-- **Explainable and correctable:** "Why this label?" shades the words that move the score most, and "Wrong label?" lets users record the right label, collected as a hand-checked test set for the next model.
-- **Tested bigger models, kept what worked (Nov 2026):** Malaysian DeBERTa-v2, Malaysian RoBERTa and XLM-T, each chosen on validation only, did not beat mBERT on test (best 75.84%). A 3:1 blend of mBERT with the TF-IDF baseline, picked by cross-validation inside the validation split, did: **77.37%** test accuracy, up 1.33 points. That is a small gain at the edge of statistical significance (McNemar p = 0.047), and I report it that way. Scores are now temperature-scaled so they better track how often labels are right.
-- **Still going:** larger XLM-R models and distillation into the browser model are training on Kaggle GPUs, under the same validation-first rules.
+- **Corrected evaluation:** the original train/test splits overlapped, so I rebuilt the evaluation on a clean, disjoint split (76.04% test accuracy).
+- **Better model:** test accuracy is now **80.33%**. I trained larger XLM-RoBERTa models on Kaggle's free GPUs and distilled them into a model small enough for a browser. Every choice was made on validation, and ideas that didn't help were recorded and left out. Full results and caveats are in the repo.
+- **Private, always-on web app:** the model runs in the visitor's browser, so their text never leaves the device.
+- **Advanced UI/UX:** YouTube comment dashboards, explanations for each label, video comparisons and downloadable reports.
 
-[Live web app](https://capstone2-sentiment-streamlit-colab.pages.dev/) · [Explore source](https://github.com/SiobhanGoh/capstone2-sentiment-streamlit-colab/tree/browser-model) · [Original Streamlit demo](https://huggingface.co/spaces/SiobhanGoh/emotion-detection-malaybert-skeleton) <sub>(wakes up after a minute when idle)</sub>
+[Live web app](https://capstone2-sentiment-streamlit-colab.pages.dev/) · [Explore source](https://github.com/SiobhanGoh/capstone2-sentiment-streamlit-colab) · [Original Streamlit demo](https://huggingface.co/spaces/SiobhanGoh/emotion-detection-malaybert-skeleton) <sub>(wakes up after a minute when idle)</sub>
 
 #### 03 · [Klang Valley Blood Donation Forecasts](https://github.com/SiobhanGoh/klang-valley-blood-donation-dashboard)
 <sub>November 2026 · grew out of my BloodReady AI analysis</sub>
 
-An R Shiny dashboard of daily blood-donation collections in the Klang Valley by ABO blood group.
+A dashboard of daily blood-donation collections in the Klang Valley by ABO blood group, with all the analysis in R.
 
 **What improved**
-- **From one-off report to live dashboard:** my BloodReady R Markdown analysis now refreshes every morning with the latest data.gov.my records, through a tested GitHub Actions pipeline.
-- **Still checked against the original:** automated tests confirm the four forecasting methods still reproduce the report's results on its frozen snapshot.
-- **Easier to explore:** a story-style layout with tabs instead of long scrolls, interactive charts, light and dark themes, a live tracker, low-collection-day errors, a Blood 101 guide for donors and printable reports.
-- **Explains itself:** a plain-words "What this shows" beside every chart, worded by the size of the result and updated as you change the filters, plus a welcome card and phone layouts.
-- **Faster to open:** I cut the browser download by drawing charts directly with plotly.js and loading 46 R packages instead of 66, so the first visit now takes around half a minute.
+- **From one-off report to live dashboard:** my BloodReady R Markdown analysis now refreshes every morning from data.gov.my through a tested, automated pipeline. It is still checked against the original report's results.
+- **Much faster:** rebuilt as a static site that opens in a second or two, down from up to a minute.
+- **Advanced UI/UX:** a story-style layout, plain-words explanations beside every chart, light and dark themes, phone layouts and printable reports.
 
-[Live dashboard](https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/) <sub>(first visit takes around half a minute while R loads)</sub> · [Explore source](https://github.com/SiobhanGoh/klang-valley-blood-donation-dashboard)
+[Live dashboard](https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/) · [Explore source](https://github.com/SiobhanGoh/klang-valley-blood-donation-dashboard)
 
 > These are portfolio prototypes and academic projects—not validated production decision systems. See individual READMEs for model-evaluation limitations.
 
@@ -113,8 +106,8 @@ Research and application development require more than a high metric. My recent 
 
 **Languages & analysis** · Python · R · TypeScript · Pandas · NumPy · scikit-learn · statistical modelling  
 **Machine learning & NLP** · PyTorch · Transformers · BERT fine-tuning · classical ML · model evaluation  
-**Visualisation & applications** · React · R Shiny / Shinylive · Streamlit · Plotly · Matplotlib · ggplot2 · R Markdown · ReportLab  
-**Deployment & tools** · ONNX / transformers.js · GitHub Actions · GitHub Pages · Cloudflare Pages · Hugging Face Spaces · Jupyter / Google Colab
+**Visualisation & applications** · React · R Shiny · Streamlit · Plotly · Matplotlib · ggplot2 · R Markdown · ReportLab  
+**Deployment & tools** · ONNX / transformers.js · Kaggle GPUs · GitHub Actions · GitHub Pages · Cloudflare Pages · Hugging Face Spaces · Jupyter / Google Colab
 
 <details>
 <summary><strong>Additional technical work</strong></summary>
