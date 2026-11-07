@@ -55,9 +55,9 @@ Open a CSV or Excel sales export and get trends, forecasts, customer segments an
 
 **What improved in version 2**
 - **New platform:** moved off Streamlit to a fast browser app that doesn't sleep. Your file never leaves the tab.
-- **Stronger, more honest analysis:** four forecasting models tested on past weeks, with error bands from their real mistakes, more careful data handling and misleading labels removed.
+- **Stronger, more honest analysis:** four forecasting models tested on past weeks, with 80% ranges set from their past errors, more careful data handling and misleading labels removed.
 - **Redesigned UI/UX:** a new interface with plain-words explanations, Bahasa Malaysia, accessibility checks and phone layouts.
-- **New features and data:** customer segments, product pairings, shareable views, and two new sample stores built from real UK and official Malaysian data.
+- **New features and data:** customer segments, product pairings, a price what-if simulator, shareable views, an MCP server that lets other apps query the same tested engine, and two new sample stores built from real UK and official Malaysian data.
 
 [Live app](https://siobhangoh.github.io/RetailAI-Adaptive-Sales-Intelligence/) · [Explore source](https://github.com/SiobhanGoh/RetailAI-Adaptive-Sales-Intelligence)
 
@@ -69,6 +69,7 @@ Negative / Neutral / Positive sentiment for Malay, English and code-switched tex
 **What improved**
 - **Corrected evaluation:** the original train/test splits overlapped, so I rebuilt the evaluation on a clean, disjoint split (76.04% test accuracy).
 - **Better model:** test accuracy is now **80.33%**. I trained larger XLM-RoBERTa models on Kaggle's free GPUs and distilled them into a model small enough for a browser. Every choice was made on validation, and ideas that didn't help were recorded and left out. Full results and caveats are in the repo.
+- **Knows when it's unsure:** the app marks its least clear labels "check by hand", using a cut-off chosen on validation. On test, the confident 56% are 90.3% right.
 - **Private, always-on web app:** the model runs in the visitor's browser, so their text never leaves the device.
 - **Advanced UI/UX:** YouTube comment dashboards, explanations for each label, video comparisons and downloadable reports.
 
@@ -82,6 +83,7 @@ A dashboard of daily blood-donation collections in the Klang Valley by ABO blood
 **What improved**
 - **From one-off report to live dashboard:** my BloodReady R Markdown analysis now refreshes every morning from data.gov.my through a tested, automated pipeline. It is still checked against the original report's results.
 - **Much faster:** rebuilt as a static site that opens in a second or two, down from up to a minute.
+- **Honest about uncertainty:** 80% forecast ranges checked on years they never saw, a watch for likely quiet days, and a public track record that logs every forecast and scores it once the data arrives.
 - **Advanced UI/UX:** a story-style layout, plain-words explanations beside every chart, light and dark themes, phone layouts and printable reports.
 
 [Live dashboard](https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/) · [Explore source](https://github.com/SiobhanGoh/klang-valley-blood-donation-dashboard)
