@@ -1,4 +1,4 @@
-"""Builds the three 'Projects at a glance' cards in assets/cards/.
+"""Builds the 'Projects at a glance' cards in assets/cards/.
 
 Run: python scripts/make_project_cards.py
 Every figure on a card comes from that project's own README or evaluation files.
@@ -43,6 +43,16 @@ CARDS = [
         "chips": ["R", "Shiny", "GitHub Actions"],
         "accent": "#E2667E", "accent2": "#D88BA7", "motif": "drop",
     },
+    {
+        "file": "floodpulse.svg",
+        "tag": "CLOUD DATA ON AWS",
+        "title": ["FloodPulse"],
+        "pitch": ["Reads Malaysian river levels", "every 15 minutes and checks", "each reading before saving it."],
+        "big": "15 min", "big_label": "serverless collection on AWS",
+        "facts": ["Built entirely from code (CDK)", "Catches repeats, 0s and faults", "Runs in the AWS Malaysia region"],
+        "chips": ["AWS Lambda", "DynamoDB", "CDK"],
+        "accent": "#8FB8E8", "accent2": "#AE92BA", "motif": "river",
+    },
 ]
 
 
@@ -61,6 +71,13 @@ def motif(kind, a, b):
             f'<rect x="22" y="30" width="48" height="30" rx="11" fill="{b}" opacity=".7"/>'
             f'<path d="M58 60 l6 9 l-14 -9z" fill="{b}" opacity=".7"/>'
             '<circle cx="14" cy="17" r="3.2" fill="#1E2433"/><circle cx="26" cy="17" r="3.2" fill="#1E2433"/><circle cx="38" cy="17" r="3.2" fill="#1E2433"/>'
+        )
+    if kind == "river":  # river waves under a dashed danger line
+        return (
+            f'<path d="M0 18 H70" stroke="{b}" stroke-width="2.2" stroke-dasharray="5 4"/>'
+            f'<path d="M0 36 Q9 28 18 36 T35 36 T53 36 T70 36 V70 H0Z" fill="{a}" opacity=".45"/>'
+            f'<path d="M0 46 Q9 38 18 46 T35 46 T53 46 T70 46 V70 H0Z" fill="{a}" opacity=".85"/>'
+            '<circle cx="54" cy="26" r="4" fill="#F9F7FA"/>'
         )
     return (  # blood drop with a pulse line
         f'<path d="M35 0 C41 18 63 34 63 50 A28 28 0 0 1 7 50 C7 34 29 18 35 0Z" fill="{a}" opacity=".9"/>'

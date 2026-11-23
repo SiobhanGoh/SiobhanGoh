@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="492" viewBox="0 0 360 492" role="img" aria-label="FloodPulse: Reads Malaysian river levels every 15 minutes and checks each reading before saving it.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#111622"/><stop offset="70%" stop-color="#1E2433"/><stop offset="100%" stop-color="#312536"/></linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#8FB8E8"/><stop offset="100%" stop-color="#AE92BA"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#8FB8E8" stop-opacity="0.22"/><stop offset="100%" stop-color="#8FB8E8" stop-opacity="0"/></radialGradient>
+    <style>
+      text{font-family:Arial,'DejaVu Sans',sans-serif}
+      .tag{font-size:13px;fill:#8FB8E8;letter-spacing:2.4px;font-weight:700}
+      .title{font-size:30px;font-weight:700;fill:#F9F7FA}
+      .pitch{font-size:17px;fill:#D4D3DD}
+      .big{font-size:50px;font-weight:700;fill:url(#acc)}
+      .biglab{font-size:15px;fill:#C3C1CF}
+      .fact{font-size:16px;fill:#E8E6EE}
+      .chip{font-size:14px;fill:#F3F0F6}
+    </style>
+  </defs>
+  <rect width="360" height="492" rx="22" fill="url(#bg)"/>
+  <rect x=".5" y=".5" width="359" height="491" rx="21.5" fill="none" stroke="#8FB8E8" stroke-opacity=".3"/>
+  <circle cx="300" cy="62" r="105" fill="url(#halo)"/>
+  <g transform="translate(272 22) scale(.88)"><path d="M0 18 H70" stroke="#AE92BA" stroke-width="2.2" stroke-dasharray="5 4"/><path d="M0 36 Q9 28 18 36 T35 36 T53 36 T70 36 V70 H0Z" fill="#8FB8E8" opacity=".45"/><path d="M0 46 Q9 38 18 46 T35 46 T53 46 T70 46 V70 H0Z" fill="#8FB8E8" opacity=".85"/><circle cx="54" cy="26" r="4" fill="#F9F7FA"/></g>
+  <rect x="26" y="32" width="28" height="4" rx="2" fill="url(#acc)"/>
+  <text x="26" y="58" class="tag">CLOUD DATA ON AWS</text>
+  <text x="26" y="92" class="title">FloodPulse</text><text x="26" y="130" class="pitch">Reads Malaysian river levels</text><text x="26" y="153" class="pitch">every 15 minutes and checks</text><text x="26" y="176" class="pitch">each reading before saving it.</text><line x1="26" y1="203" x2="334" y2="203" stroke="#F9F7FA" stroke-opacity=".12"/><text x="26" y="255" class="big">15 min</text><text x="26" y="279" class="biglab">serverless collection on AWS</text><circle cx="30" cy="308" r="3.5" fill="#8FB8E8"/><text x="42" y="313" class="fact">Built entirely from code (CDK)</text><circle cx="30" cy="333" r="3.5" fill="#8FB8E8"/><text x="42" y="338" class="fact">Catches repeats, 0s and faults</text><circle cx="30" cy="358" r="3.5" fill="#8FB8E8"/><text x="42" y="363" class="fact">Runs in the AWS Malaysia region</text>
+  <rect x="26" y="436" width="108" height="30" rx="15" fill="#8FB8E8" fill-opacity=".14" stroke="#8FB8E8" stroke-opacity=".6"/><text x="80" y="456" text-anchor="middle" class="chip">AWS Lambda</text><rect x="142" y="436" width="90" height="30" rx="15" fill="#8FB8E8" fill-opacity=".14" stroke="#8FB8E8" stroke-opacity=".6"/><text x="187" y="456" text-anchor="middle" class="chip">DynamoDB</text><rect x="240" y="436" width="51" height="30" rx="15" fill="#8FB8E8" fill-opacity=".14" stroke="#8FB8E8" stroke-opacity=".6"/><text x="266" y="456" text-anchor="middle" class="chip">CDK</text>
+</svg>

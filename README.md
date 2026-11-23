@@ -19,17 +19,23 @@ Bachelor of Information Systems (Honours), Data Analytics · Sunway University</
 
 <table>
   <tr>
-    <td width="33%" valign="top" align="center">
+    <td width="50%" valign="top" align="center">
       <a href="https://siobhangoh.github.io/RetailAI-Adaptive-Sales-Intelligence/"><img src="assets/cards/retailai.svg" width="260" alt="RetailAI: drop in a sales file and get trends, forecasts with error bands, customer segments and product pairings, all in the browser" /></a><br/>
       <a href="https://siobhangoh.github.io/RetailAI-Adaptive-Sales-Intelligence/"><b>Live app</b></a> · <a href="https://github.com/SiobhanGoh/RetailAI-Adaptive-Sales-Intelligence">Code</a> · <a href="#01--retailai--adaptive-sales-intelligence">Details ↓</a>
     </td>
-    <td width="33%" valign="top" align="center">
+    <td width="50%" valign="top" align="center">
       <a href="https://capstone2-sentiment-streamlit-colab.pages.dev/"><img src="assets/cards/sentiment.svg" width="260" alt="Rojak Sentiment: Malay, English and code-switched sentiment with a multilingual BERT distilled from XLM-RoBERTa-large, 80.33% test accuracy, running in the browser" /></a><br/>
       <a href="https://capstone2-sentiment-streamlit-colab.pages.dev/"><b>Live app</b></a> · <a href="https://github.com/SiobhanGoh/capstone2-sentiment-streamlit-colab">Code</a> · <a href="#02--malayenglish-sentiment-analysis">Details ↓</a>
     </td>
-    <td width="33%" valign="top" align="center">
+  </tr>
+  <tr>
+    <td width="50%" valign="top" align="center">
       <a href="https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/"><img src="assets/cards/blood-dashboard.svg" width="260" alt="Blood Donation Forecasts: R dashboard of Klang Valley donations by ABO group, rebuilt daily from official data as a fast static site, comparing four forecasting methods" /></a><br/>
       <a href="https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/"><b>Live app</b></a> · <a href="https://github.com/SiobhanGoh/klang-valley-blood-donation-dashboard">Code</a> · <a href="#03--klang-valley-blood-donation-forecasts">Details ↓</a>
+    </td>
+    <td width="50%" valign="top" align="center">
+      <a href="https://github.com/SiobhanGoh/floodpulse"><img src="assets/cards/floodpulse.svg" width="260" alt="FloodPulse: reads Malaysian river levels every 15 minutes on AWS and checks each reading before saving it" /></a><br/>
+      <a href="https://github.com/SiobhanGoh/floodpulse"><b>Code</b></a> · <a href="#04--floodpulse--river-level-monitoring-on-aws">Details ↓</a>
     </td>
   </tr>
 </table>
@@ -88,6 +94,21 @@ A dashboard of daily blood-donation collections in the Klang Valley by ABO blood
 
 [Live dashboard](https://siobhangoh.github.io/klang-valley-blood-donation-dashboard/) · [Explore source](https://github.com/SiobhanGoh/klang-valley-blood-donation-dashboard)
 
+#### 04 · [FloodPulse — River-Level Monitoring on AWS](https://github.com/SiobhanGoh/floodpulse)
+<sub>Started November 2026 · my first AWS project, in progress</sub>
+
+A serverless system that reads Malaysia's public river-level tables every 15 minutes, checks each reading and keeps its own history, running in the AWS Malaysia region.
+
+**What it does so far**
+- **Built from code:** the database table, the collector function and the 15-minute schedule are all defined in Python with AWS CDK, so one command builds or removes everything.
+- **Careful with real data:** inspecting live readings showed the source page repeats its table about 8 times, two stations share one ID, and a level of 0 means "no reading". The collector removes repeats, keys stations by ID + name and labels every reading (ok, stale, no data, suspect).
+- **Secure and low-cost by design:** an IAM admin user with MFA instead of the root account, a collector that may only add rows to its own table, and services chosen to stay within AWS's always-free limits.
+- **Tested:** 23 automated tests run on every push with GitHub Actions.
+
+**Next:** Telegram alerts for followed districts, more states, and a model that forecasts river levels a few hours ahead.
+
+[Explore source](https://github.com/SiobhanGoh/floodpulse) <sub>· unofficial learning project; always follow JPS, MetMalaysia and NADMA warnings</sub>
+
 > These are portfolio prototypes and academic projects—not validated production decision systems. See individual READMEs for model-evaluation limitations.
 
 ### Selected graduate research
@@ -109,6 +130,7 @@ Research and application development require more than a high metric. My recent 
 **Languages & analysis** · Python · R · TypeScript · Pandas · NumPy · scikit-learn · statistical modelling  
 **Machine learning & NLP** · PyTorch · Transformers · BERT fine-tuning · classical ML · model evaluation  
 **Visualisation & applications** · React · R Shiny · Streamlit · Plotly · Matplotlib · ggplot2 · R Markdown · ReportLab  
+**Cloud (AWS)** · Lambda · DynamoDB · EventBridge · S3 · IAM · CloudWatch · AWS CDK  
 **Deployment & tools** · ONNX / transformers.js · Kaggle GPUs · GitHub Actions · GitHub Pages · Cloudflare Pages · Hugging Face Spaces · Jupyter / Google Colab
 
 <details>
